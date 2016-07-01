@@ -10,7 +10,7 @@ MAINTAINER Grzegorz Adamowicz (gadamowicz@gstlt.info)
 
 LABEL Description="Ubuntu + Oracle Java + Maven + Fabric"
 
-ENV JAVA_HOME=/usr
+ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 RUN apt-get update -y
 RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
@@ -25,8 +25,6 @@ RUN apt-get install --no-install-recommends -y oracle-java8-installer oracle-jav
 RUN apt-get clean
 
 RUN pip install fabric
-#    fab -l || true && \
-#    apt-get clean
 
 CMD /bin/bash
 
