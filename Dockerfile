@@ -20,7 +20,7 @@ RUN add-apt-repository ppa:webupd8team/java && \
 
 RUN apt-get install --no-install-recommends -y oracle-java8-installer oracle-java8-set-default && \
     apt-get install --no-install-recommends -y maven && \
-    apt-get install -y python python-pip python-dev
+    apt-get install -y git python python-pip python-dev
 
 RUN apt-get clean
 
